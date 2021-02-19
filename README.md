@@ -22,7 +22,7 @@ As a user, you should be able to:
 - We know you have a life outside of interviewing with Tooploox, so there is no external due date to perform this task. However we do expect you to set that date, communicate it with us and deliver within the timeline.
 - You should pay attention to the architecture of the app and usage of design patterns and data structures. 
 - Due to the current situation remote work is becoming increasingly prevalent and being accountable for your work is important. We want to be able to track you progress via Git. We appreciate incremental commits and a consistent branching strategy.
-- Please use this repository as the base of your work.
+- Please use this repository as the base of your work. Once you finish your work your access to the repository will be revoked so we can can review and comment the code.
 - You should write example unit tests to show that your solution is testable (at least 1 test per architecture layer).
 - You should write the app in a way that could be easily extended. Think of it this way: the app will be actively developed by a team of 5 over the course of next year.
 
