@@ -3,20 +3,18 @@ package com.tooploox.androidrecruitmenttask
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.tooploox.androidrecruitmenttask.databinding.SongsListItemBinding
 
-class SongsListAdapter : ListAdapter<Song, SongsListAdapter.SongViewHolder>(SongDiffCallback()) {
+class SongsListAdapter : ListAdapter<Song, SongsListAdapter.SongViewHolder>(/*Add diff callback*/) {
 
     private lateinit var binding: SongsListItemBinding
 
     inner class SongViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun onBind(song: Song) {
-            binding.tvTitle.text = song.title
-            binding.tvArtist.text = song.artist
+            // Update binding
         }
     }
 
@@ -27,15 +25,5 @@ class SongsListAdapter : ListAdapter<Song, SongsListAdapter.SongViewHolder>(Song
 
     override fun onBindViewHolder(holder: SongViewHolder, position: Int) {
         holder.onBind(getItem(position))
-    }
-}
-
-class SongDiffCallback : DiffUtil.ItemCallback<Song>() {
-    override fun areItemsTheSame(oldItem: Song, newItem: Song): Boolean {
-        return oldItem.title == newItem.title
-    }
-
-    override fun areContentsTheSame(oldItem: Song, newItem: Song): Boolean {
-        return oldItem == newItem
     }
 }

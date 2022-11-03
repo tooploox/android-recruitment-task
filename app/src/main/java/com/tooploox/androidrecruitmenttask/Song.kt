@@ -1,6 +1,6 @@
 package com.tooploox.androidrecruitmenttask
 
+// Update model to match project needs
 data class Song(
-    val title: String,
-    val artist: String
+    val value: Any
 )
